@@ -7,7 +7,7 @@
     <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/prism.css' %}"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/ghpages-materialize.css' %}"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="{% static 'ffhq/css/styles.css' %}"  media="screen,projection"/>
-    <title>{% block head_title %}{% endblock %}</title>
+    <title>{% block head_title %}Firefighter Headquarter - {% block sub_title %}{% endblock %}{% endblock %}</title>
     {% block extra_head %}
     {% endblock %}
   </head>
@@ -15,8 +15,7 @@
   <body>
   {% block body %}
     {% if messages %}
-      <div>
-        <strong>Messages:</strong>
+      <div class="messages">
         <ul>
           {% for message in messages %}
             <li>{{message}}</li>
@@ -33,12 +32,10 @@
 
     <!--Import jQuery before materialize.js-->
     {% block footer %}
-
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="{% static 'materialize/bin/materialize.js' %}"></script>
       {% block footer_scripts %}
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="{% static 'materialize/bin/materialize.js' %}"></script>
       {% endblock %}
-
     {% endblock %}
 
   {% endblock %} <!--/block body -->

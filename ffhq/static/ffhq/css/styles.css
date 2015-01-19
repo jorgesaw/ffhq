@@ -6,12 +6,12 @@ nav {
 }
 
 nav.top-nav {
-  height: 139px;
+  height: 138px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
 
 nav.top-nav a.page-title {
-line-height: 139px;
+line-height: 138px;
 font-size: 48px; 
 }

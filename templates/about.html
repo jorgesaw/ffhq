@@ -1,0 +1,27 @@
+{% extends "site.html" %}
+
+{% load i18n %}
+{% load account %}
+{% load url from future %}
+
+{% block sub_title %}{% trans "Acerca de este software" %}{% endblock %}
+
+{% block content %}
+
+<main>
+
+  <div class="z-depth-2">
+    <nav class="top-nav no-pad-bot teal darken-3">
+      <div class="container">
+        <h1>{% trans "Acerca de este software" %}</h1>
+      </div>
+    </nav>
+  </div>
+
+  <div class="section no-pad-bot">
+    <div class="container">
+    </div>
+  </div>
+</main>
+
+{% endblock %}

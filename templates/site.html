@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    <header>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav"><i class="mdi-navigation-menu"></i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><i class="large mdi-maps-local-attraction"></i><br/>Bomberos de Chascomus</li>
+        {% if not user.is_authenticated %}
+        <li class="bold"><a href="{% url 'account_login' %}">Identificarse</a></li>
+        {% endif %}
+        <li class="bold"><a href="about.html">Acerca de</a></li>
+      </ul>
+    </header>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

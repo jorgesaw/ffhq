@@ -1,0 +1,46 @@
+{% load staticfiles %}
+
+<html>
+  <head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'materialize/bin/materialize.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/prism.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/ghpages-materialize.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'ffhq/css/styles.css' %}"  media="screen,projection"/>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+
+  <body>
+  {% block body %}
+    {% if messages %}
+      <div>
+        <strong>Messages:</strong>
+        <ul>
+          {% for message in messages %}
+            <li>{{message}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% block navbar %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block extra_body %}{% endblock %}
+
+    <!--Import jQuery before materialize.js-->
+    {% block footer %}
+
+      {% block footer_scripts %}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{% static 'materialize/bin/materialize.js' %}"></script>
+      {% endblock %}
+
+    {% endblock %}
+
+  {% endblock %} <!--/block body -->
+  </body>
+</html>

@@ -10,8 +10,8 @@
 
 <main>
 
-  <div class="z-depth-2">
-    <nav class="top-nav no-pad-bot deep-orange accent-3">
+  <div class="z-depth-1">
+    <nav class="top-nav no-pad-bot red darken-1">
       <div class="container">
         <h1>{% trans "Identifíquese" %}</h1>
       </div>
@@ -52,7 +52,7 @@
         {% endif %}
 
         <a class="button secondaryAction" style="color:black" href="{% url 'account_reset_password' %}"><b>{% trans "¿Olvidó su password?" %}</b></a>
-        <button class="btn waves-effect waves-light deep-orange accent-3 btn-large" type="submit" name="action">{% trans "Ingresar" %}
+        <button class="btn waves-effect waves-light red btn-large" type="submit" name="action">{% trans "Ingresar" %}
           <i class="mdi-content-send right"></i>
         </button>
       </form>

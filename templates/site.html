@@ -5,10 +5,17 @@
       <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav"><i class="mdi-navigation-menu"></i></a></div>
       <ul id="nav-mobile" class="side-nav fixed">
         <li class="logo"><i class="large mdi-maps-local-car-wash {% block logo_bg %}{% endblock %}"></i><br/><strong>Bomberos de Chascomus</strong></li>
-        {% if not user.is_authenticated %}
-        <li class="bold"><a href="{% url 'account_login' %}">Identificarse</a></li>
+        {% if user.is_authenticated %}
+          <li class="bold"><a href="{% url 'dashboard' %}">Home</a></li>
         {% endif %}
-        <li class="bold"><a href="{% url 'about' %}">Acerca de</a></li>
+        {% block sub_nav %}{% endblock %}
+        {% if not user.is_authenticated %}
+          <li class="bold"><a href="{% url 'account_login' %}">Identificarse</a></li>
+          <li class="bold"><a href="{% url 'about' %}">Acerca de</a></li> {% else %}
+        {% endif %}
+        {% if user.is_authenticated %}
+          <li class="bold"><a href="{% url 'account_logout' %}">Cerrar Sesión</a></li>
+        {% endif %}
       </ul>
     </header>
 {% endblock %}

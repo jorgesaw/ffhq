@@ -15,12 +15,10 @@
   <body>
   {% block body %}
     {% if messages %}
-      <div class="messages">
-        <ul>
+      <div class="messages" style="display:none;">
           {% for message in messages %}
-            <li>{{message}}</li>
+            {{message}}
           {% endfor %}
-        </ul>
       </div>
     {% endif %}
 
@@ -35,6 +33,16 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="{% static 'materialize/bin/materialize.js' %}"></script>
       {% block footer_scripts %}
+      <script type="text/javascript">
+        $(document).ready(
+          function(){ 
+            var messages = $('.messages').html();
+            if (messages === undefined){
+              return;
+            }
+            toast(messages, 4000, 'rounded');
+          }); 
+      </script>
       {% endblock %}
     {% endblock %}
 

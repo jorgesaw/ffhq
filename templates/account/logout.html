@@ -3,20 +3,36 @@
 {% load url from future %}
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block sub_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Out" %}</h1>
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<main>
 
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{redirect_field_name}}" value="{{redirect_field_value}}"/>
-  {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
-</form>
+  <div class="z-depth-2">
+    <nav class="top-nav no-pad-bot red darken-1">
+      <div class="container">
+        <h1>{% trans "Sign Out" %}</h1>
+      </div>
+    </nav>
+  </div>
 
+  <div class="section no-pad-bot">
+    <div class="container">
+      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+
+      <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{redirect_field_name}}" value="{{redirect_field_value}}"/>
+        {% endif %}
+        <button class="btn waves-effect waves-light red btn-large" type="submit" name="action">{% trans "Sign Out" %}
+          <i class="mdi-content-send right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+</main>
 
 {% endblock %}

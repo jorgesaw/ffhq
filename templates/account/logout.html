@@ -9,11 +9,9 @@
 
 <main>
 
-  <div class="z-depth-2">
-    <nav class="top-nav no-pad-bot red darken-1">
-      <div class="container">
-        <h1>{% trans "Sign Out" %}</h1>
-      </div>
+  <div class="z-depth-1">
+    <nav class="nav-wrapper top-nav-tiny red darken-1">
+      <ul class="brand-logo" style="margin-left:10px;">{% trans "Sign Out" %}</ul>
     </nav>
   </div>
 
@@ -26,7 +24,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{redirect_field_name}}" value="{{redirect_field_value}}"/>
         {% endif %}
-        <button class="btn waves-effect waves-light red btn-large" type="submit" name="action">{% trans "Sign Out" %}
+        <button class="btn waves-effect waves-light red" type="submit" name="action">{% trans "Sign Out" %}
           <i class="mdi-content-send right"></i>
         </button>
       </form>

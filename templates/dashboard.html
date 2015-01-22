@@ -11,10 +11,11 @@
 <main>
 
   <div class="z-depth-1">
-    <nav class="top-nav no-pad-bot teal lighten-3">
-      <div class="container">
-        <h1>{% trans "Dashboard" %}</h1>
-      </div>
+    <nav class="nav-wrapper top-nav-tiny red darken-1">
+      <a href="#" class="brand-logo" style="margin-left:10px;">Panel de Control</a>
+      <ul id="nav-mobile" class="right side-nav">
+        <li><a href="{% url 'account_logout' %}">Cerrar sesión</a></li>
+      </ul>
     </nav>
   </div>
 

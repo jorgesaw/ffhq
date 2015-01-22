@@ -15,3 +15,16 @@ nav.top-nav a.page-title {
 line-height: 138px;
 font-size: 48px; 
 }
+
+
+nav.top-nav-tiny {
+  height: 69px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+h4 {
+    font-size: 2.28rem;
+    line-height: 2.508rem;
+    margin: 1.14rem 0 0.912rem;
+}

@@ -4,7 +4,7 @@
 {% load account %}
 {% load url from future %}
 
-{% block sub_title %}{% trans "Dashboard" %}{% endblock %}
+{% block sub_title %}{% trans "Cuadrilla de bomberos" %}{% endblock %}
 
 {% block content %}
 
@@ -12,12 +12,14 @@
 
   <div class="z-depth-1">
     <nav class="nav-wrapper top-nav-tiny teal lighten-1">
-      <a href="#" class="brand-logo" style="margin-left:10px;">Panel de Control</a>
+      <a href="#" class="brand-logo" style="margin-left:10px;">Cuadrilla de Bomberos</a>
     </nav>
   </div>
 
   <div class="section no-pad-bot">
     <div class="container">
+       <a class="btn-floating btn-large waves-effect waves-light right red"
+         href="{% url 'bombero_add' %}"><i class="mdi-content-add"></i></a>
     </div>
   </div>
 </main>

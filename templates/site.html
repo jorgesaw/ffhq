@@ -6,6 +6,8 @@
       <ul id="nav-mobile" class="side-nav fixed">
         {% if user.is_authenticated %}
           <li class="bold"><a href="{% url 'dashboard' %}">Inicio</a></li>
+          <li class="bold"><a href="{% url 'bombero_list' %}">Cuadrilla</a></li>
+          <li class="bold"><a href="{% url 'account_logout' %}">Cerrar sesión</a></li>
         {% endif %}
         {% block sub_nav %}{% endblock %}
         {% if not user.is_authenticated %}

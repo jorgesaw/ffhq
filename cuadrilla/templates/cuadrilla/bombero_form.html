@@ -1,0 +1,33 @@
+{% extends "site.html" %}
+
+{% load i18n %}
+{% load url from future %}
+{% load crispy_forms_tags %}
+
+{% block sub_title %}{% trans "Cuadrilla de bomberos" %}{% endblock %}
+
+{% block content %}
+
+<main>
+
+  <div class="z-depth-1">
+    <nav class="nav-wrapper top-nav-tiny teal lighten-1">
+    {% if form.instance.id %}
+    <a href="#" class="brand-logo" style="margin-left:10px;">{% trans "Editando miembro de la cuadrilla" %}</a>
+    {% else %}
+    <a href="#" class="brand-logo" style="margin-left:10px;">{% trans "Nuevo miembro de cuadrilla" %}</a>
+    {% endif %}
+    </nav>
+  </div>
+
+  <div class="section no-pad-bot">
+    <div class="container">
+      {% crispy form %}
+      <button class="btn waves-effect waves-light blue" type="submit" name="action">{% trans "Guardar" %}
+        <i class="mdi-content-send right"></i>
+      </button>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

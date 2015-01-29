@@ -43,6 +43,8 @@ INSTALLED_APPS = (
     'allauth',
     'allauth.account',
     'materialize',
+    'crispy_forms',
+    'crispy_forms_materialize',
 
     # our apps
     'ffhq',
@@ -119,3 +121,6 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+
+# crispy-forms settings
+CRISPY_TEMPLATE_PACK = 'materialize_css_forms'

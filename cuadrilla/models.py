@@ -66,7 +66,7 @@ class Bombero(models.Model):
         null=True,
         blank=True,
         max_length=255,
-        verbose_name=_('numero_del_hamdy'))
+        verbose_name=_('Numero del Hamdy'))
     estado_civil = models.CharField(
         null=True,
         blank=True,
@@ -89,8 +89,7 @@ class Bombero(models.Model):
         blank=True,
         verbose_name=_('Vacunas'))
     pencionado = models.BooleanField(
-        null=True,
-        blank=True,
+        default=False,
         verbose_name=_('Pencionado')
     )
     carnet_conducir = models.BooleanField(

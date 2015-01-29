@@ -30,7 +30,8 @@
 
     <!--Import jQuery before materialize.js-->
     {% block footer %}
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+      <script type="text/javascript" src="{% static 'ffhq/vendors/js/jquery.min.js' %}"></script>
       <script type="text/javascript" src="{% static 'materialize/bin/materialize.js' %}"></script>
       {% block footer_scripts %}
       <script type="text/javascript">

@@ -31,7 +31,7 @@ Clonar el repo, instalar dependencias:
 
 Por el momento es necesario instalar crispy-forms-materialize desde el repositor (con el entorno activado):
 ```
-(ffhq)user@host:# git clone git@github.com:edvm/crispy-forms-materialize.gitt
+(ffhq)user@host:# git clone git@github.com:edvm/crispy-forms-materialize.git
 (ffhq)user@host:# python setup.py develop
 ```
 
